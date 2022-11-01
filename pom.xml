@@ -35,31 +35,24 @@
             <version>0.8.5</version>
             <executions>
                 <execution>
-                    <id>default-prepare-agent</id>
+                    <id>prepare-agent</id>
                     <goals>
                         <goal>prepare-agent</goal>
                     </goals>
                 </execution>
                 <execution>
-                    <id>default-report</id>
-                    <goals>
-                        <goal>report</goal>
-                    </goals>
-                </execution>
-                <execution>
-                    <id>default-check</id>
+                    <id>check</id>
                     <goals>
                         <goal>check</goal>
                     </goals>
                     <configuration>
                         <rules>
                             <rule>
-                                <element>BUNDLE</element>
                                 <limits>
                                     <limit>
-                                        <counter>COMPLEXITY</counter>
+                                        <counter>LINE</counter>
                                         <value>COVEREDRATIO</value>
-                                        <minimum>0.60</minimum>
+                                        <minimum>100%</minimum>
                                     </limit>
                                 </limits>
                             </rule>
